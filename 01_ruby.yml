@@ -9,4 +9,7 @@
   tasks:
     - name: (ruby) install
       shell: bash -lc 'rbenv install 2.3.0p0'
+      shell: bash -lc 'rbenv global 2.3.0p0'
+      shell: bash -lc 'gem install bundler'
+      shell: bash -lc 'rbenv rehash'
 
