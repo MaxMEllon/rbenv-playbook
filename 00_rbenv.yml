@@ -1,0 +1,31 @@
+---
+- hosts: all
+  pre_tasks:
+    - name: (env) Get ansible_user home directory
+      shell: 'getent passwd "{{ansible_ssh_user}}" | cut -d: -f6'
+      register: ansible_home_result
+
+  tasks:
+    - apt: name={{item}}
+      with_items:
+        - autoconf
+        - bison
+        - build-essential
+        - libssl-dev
+        - libyaml-dev
+        - libreadline6-dev
+        - zlib1g-dev
+        - libncurses5-dev
+        - libffi-dev
+        - libgdbm3
+        - libgdbm-dev
+
+    - name: (rbenv) git clone
+      git:
+        repo: 'https://github.com/sstephenson/rbenv.git'
+        dest: '{{ansible_home_result.stdout}}/.rbenv'
+
+    - name: (ruby build) git clone
+      git:
+        repo: 'https://github.com/sstephenson/ruby-build.git'
+        dest: '{{ansible_home_result.stdout}}/.rbenv/plugins/ruby-build'
