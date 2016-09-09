@@ -15,4 +15,4 @@ before_script:
 
 script:
   - ansible-playbook -i hosts playbook.yml --connection=local
-  - bundle exec rspec
+  - . /etc/profile.d/rbenv.sh && bundle exec rspec
