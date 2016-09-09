@@ -1,7 +1,7 @@
 # rbenv-playbook
 
-<a href='https://circleci.com/gh/MaxMEllon/rbenv-playbook' />
-  <img src='https://img.shields.io/circleci/project/MaxMEllon/rbenv-playbook.svg' />
+<a href='https://travis-ci.org/MaxMEllon/rbenv-playbook' />
+  <img src='https://travis-ci.org/MaxMEllon/rbenv-playbook.svg?branch=master' />
 </a>
 
 About
