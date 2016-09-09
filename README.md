@@ -1,5 +1,9 @@
 # rbenv-playbook
 
+<a href='https://circleci.com/gh/MaxMEllon/rbenv-playbook' />
+  <img src='https://img.shields.io/circleci/project/MaxMEllon/rbenv-playbook.svg' />
+</a>
+
 About
 ---
 
