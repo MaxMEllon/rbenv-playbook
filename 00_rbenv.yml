@@ -4,6 +4,12 @@
 - hosts: all
   sudo: yes
   tasks:
+    - apt: name={{item}}
+      with_items:
+        - libssl-dev
+        - zlib1g-dev
+        - libreadline-dev
+
     - name: (rbenv) install
       git:
         repo: 'https://github.com/sstephenson/rbenv.git'
